@@ -13,7 +13,7 @@ const Header = () => {
         <div>
             <>
       {[ 'sm'].map((expand) => (
-        <Navbar key={expand} bg="light" expand={expand} className="mb-3">
+        <Navbar key={expand}  expand={expand} className="mb-3 nav">
           <Container fluid>
             <Navbar.Brand className='text-size'>Best Learner's</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -30,11 +30,11 @@ const Header = () => {
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link ><Link className='link' to='/home'>Home</Link></Nav.Link>
-                  <Nav.Link ><Link className='link' to='/home'>Courses</Link></Nav.Link>
-                  <Nav.Link ><Link className='link' to='/home'>BLog</Link></Nav.Link>
-                  <Nav.Link ><Link className='link' to='/home'>FAQ</Link></Nav.Link>
-                  <Nav.Link ><Link className='link' to='/home'>login</Link></Nav.Link>
-                  <Nav.Link ><Link className='link' to='/home'>Register</Link></Nav.Link>
+                  <Nav.Link ><Link className='link' to='/courses'>Courses</Link></Nav.Link>
+                  <Nav.Link ><Link className='link' to='/blog'>BLog</Link></Nav.Link>
+                  <Nav.Link ><Link className='link' to='/faq'>FAQ</Link></Nav.Link>
+                  <Nav.Link ><Link className='link' to='/login'>login</Link></Nav.Link>
+                  <Nav.Link ><Link className='link' to='/register'>Register</Link></Nav.Link>
                   <Nav.Link ><Link className='link' >Mood</Link></Nav.Link>
                 </Nav>
               </Offcanvas.Body>
