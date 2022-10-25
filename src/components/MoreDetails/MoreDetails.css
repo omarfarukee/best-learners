@@ -1,0 +1,27 @@
+.img{
+    height:350px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.img-div{
+    padding:10px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow:12px 10px 12px gray;
+}
+.more{
+    display: flex;
+    margin:10px;
+}
+.small{
+    padding:10px;
+    margin-left: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow:12px 10px 12px gray;
+}
+.time{
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+}

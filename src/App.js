@@ -44,7 +44,7 @@ const router = createBrowserRouter([
         element:<Faq></Faq>
       },
       {
-        path:'/courses/:id',
+        path:'/:id',
         element:<MoreDetails></MoreDetails>,
         loader: ({params}) => fetch(`https://best-learners-server.vercel.app/categories/${params.id}`)
       },

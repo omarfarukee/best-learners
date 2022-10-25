@@ -5,6 +5,7 @@
     width:150px;
     text-align: center;
     border-radius: 10px;
+    text-decoration: none;
 }
 .images{
     height:170px;
@@ -15,4 +16,11 @@
     margin:10px;
     box-shadow: 10px 8px 8px gray;
 
+}
+.link{
+    text-decoration: none;
+}
+.card-btn{
+    text-decoration: none;
+    color: white;
 }

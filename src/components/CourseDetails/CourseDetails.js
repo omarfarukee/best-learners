@@ -1,10 +1,11 @@
-import React from   'react';
+import React from  'react';
+import {Link} from 'react-router-dom'
 import ('./CourseDetails.css')
 const CourseDetails = ({course}) => {
-    const { name } = course
+    const { name, id } = course
     return (
         <div>
-                <h5><button className='btn-btn'>{name}</button></h5> 
+          <h5><button className='btn-btn'><Link className='link' to={`/${id}`}> {name}</Link> </button></h5>  
         </div>
     );
 };
