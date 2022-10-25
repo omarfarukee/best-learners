@@ -13,7 +13,7 @@ const Header = () => {
         <div>
             <>
       {[ 'sm'].map((expand) => (
-        <Navbar key={expand}  expand={expand} className="mb-3 nav">
+        <Navbar key={expand}  expand={expand} className=" nav">
           <Container fluid>
             <Navbar.Brand className='text-size'>Best Learner's</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />

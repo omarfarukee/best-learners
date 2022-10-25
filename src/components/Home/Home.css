@@ -1,0 +1,12 @@
+.home{
+
+      height:500px;
+   background-size: cover;
+    background-image: url("../../images/swimming-pool-beach-luxury-hotel-outdoor-pools-spa-amara-dolce-vita-luxury-hotel-resort-tekirova-kemer-turkey.jpg");
+}
+
+.home img{
+        filter: brightness(32%);
+        opacity: 0.9;
+    
+}

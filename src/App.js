@@ -23,7 +23,8 @@ const router = createBrowserRouter([
       },
       {
         path:'/courses',
-        element:<Courses></Courses>
+        element:<Courses></Courses>,
+        loader: () => fetch('https://best-learners-server.vercel.app/categories')
       },
       {
         path:'/blog',

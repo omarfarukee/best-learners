@@ -1,0 +1,15 @@
+.course-container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    margin:2%;
+}
+.courseOne{
+    border: 2px solid red;
+    margin-right:10px;
+    height:300px;
+    text-align: center;
+}
+.courseTwo{
+    border: 2px solid red;
+    text-align: center;
+}
