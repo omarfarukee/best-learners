@@ -4,12 +4,32 @@
     margin:2%;
 }
 .courseOne{
-    border: 2px solid red;
+    padding:3%;
     margin-right:10px;
-    height:300px;
+    height:100%;
+    border-radius:10px;
+    background-color: rgb(236, 172, 76);
     text-align: center;
 }
+.title{
+  font-weight: 700;
+  text-align: center;
+}
 .courseTwo{
-    border: 2px solid red;
     text-align: center;
+}
+.card-card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+@media only screen  and (max-width: 687px){
+
+    .course-container{
+       display: grid;
+       grid-template-columns: repeat(1, 1fr);
+    }
+    .card-card{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

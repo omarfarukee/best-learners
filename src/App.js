@@ -6,6 +6,7 @@ import Courses from './components/Courses/Courses';
 import Faq from './components/FAQ/Faq';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
+import MoreDetails from './components/MoreDetails/MoreDetails';
 import Register from './components/Register/Register';
 
 import Main from './Layout/Main';
@@ -41,6 +42,11 @@ const router = createBrowserRouter([
       {
         path:'/faq',
         element:<Faq></Faq>
+      },
+      {
+        path:'/courses/:id',
+        element:<MoreDetails></MoreDetails>,
+        loader: ({params}) => fetch(`https://best-learners-server.vercel.app/categories/${params.id}`)
       },
     ]
   }

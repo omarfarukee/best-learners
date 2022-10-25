@@ -1,0 +1,18 @@
+.btn-btn{
+    border: none;
+    padding:10px;
+    background-color: blanchedalmond;
+    width:150px;
+    text-align: center;
+    border-radius: 10px;
+}
+.images{
+    height:170px;
+    border-radius: 10px;
+}
+.card-div{
+    border-radius: 15px;
+    margin:10px;
+    box-shadow: 10px 8px 8px gray;
+
+}

@@ -1,13 +1,15 @@
 import React from  'react';
 import {useLoaderData} from 'react-router-dom'
+import CourseCard from '../CourseCard/CourseCard';
 import CourseDetails from '../CourseDetails/CourseDetails';
 import ('./Course.css')
 const Courses = () => {
     const courses = useLoaderData()
     return (
         <div className='course-container'>
+            
             <div className='courseOne'>
-                 <h2>this is Courses : {courses.length}</h2>
+                 <h2 className='title'>Courses</h2>
                  {
                     courses.map(course => <CourseDetails
                     key={course.id}
@@ -15,8 +17,17 @@ const Courses = () => {
                     ></CourseDetails>)
                  }
             </div>
-           <div className='courseTwo'>
-              <h3> h2 this is course 2</h3> 
+           <div >
+              <h3 className='courseTwo '> h2 this is course 2</h3> 
+              <div className='card-card p-3'>
+                   {
+                courses.map(courseCard => <CourseCard
+                key={courseCard.id}
+                courseCard={courseCard}
+                > </CourseCard>)
+              }
+              </div>
+           
            </div>
 
         </div>

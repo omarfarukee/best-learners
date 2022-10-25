@@ -1,11 +1,10 @@
-import React from 'react';
-
+import React from   'react';
+import ('./CourseDetails.css')
 const CourseDetails = ({course}) => {
-    const {images, name, star,clases, time } = course
-    console.log(course)
+    const { name } = course
     return (
         <div>
-            
+                <h5><button className='btn-btn'>{name}</button></h5> 
         </div>
     );
 };
