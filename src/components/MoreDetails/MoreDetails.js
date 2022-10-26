@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaAngleDoubleRight } from 'react-icons/fa';
 import {useLoaderData} from 'react-router-dom'
 import ('./MoreDetails.css')
 
@@ -6,7 +7,7 @@ const MoreDetails = () => {
     const details = useLoaderData()
     console.log(details)
     return (
-        <div className='more'>
+        <div className='more mt-5'>
                 <div className='img-div'>
                     <img className='img' src={details.image} alt="" />
                 </div>
@@ -14,13 +15,13 @@ const MoreDetails = () => {
                     <h1>{details.name}</h1>
                     <p>{details.about}</p>
                     <div className='time'>
-                        <h2 className=''>{details.time}</h2>
-                        <h2 className=''>{details.classes}</h2>
-                        <h2 className=''>{details.star}</h2>
-                        <h2 className=''>{details.badge}</h2>
+                        <h5 className=''>{details.time}</h5>
+                        <h5 className=''>{details.classes}</h5>
+                        <h5 className=''>{details.star}</h5>
+                        <h5 className=''>{details.badge}</h5>
                         <h5>{details.price}</h5>
                     </div>
-                    
+                    <button className='premium'>Get Premium <FaAngleDoubleRight></FaAngleDoubleRight> </button>
                 </div>
         </div>
     );

@@ -11,3 +11,10 @@
 .nav{
     background-color: gray;
 }
+.premium{
+    width:80%;
+    padding:15px;
+    border: none;
+    background-image: linear-gradient(#EFF54D, #00AC61);
+    border-radius:10px;
+}

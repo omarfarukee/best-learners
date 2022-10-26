@@ -5,6 +5,13 @@
     border-radius: 10px;
     background-image: linear-gradient(#FF9F4A, #FF3C83);
 }
+.login{
+    width:400px;
+    border: 1px solid gray;
+    padding:20px;
+    border-radius: 10px;
+    background-image: linear-gradient(#E1A2B8, #9F2BC1);
+}
 .from-container{
     display: flex;
     justify-content: center;
@@ -25,4 +32,7 @@
     border-radius: 15px;
     border: none;
    
+}
+.text{
+    font-weight: 700;
 }
