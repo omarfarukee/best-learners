@@ -18,6 +18,7 @@ const MoreDetails = () => {
                         <h2 className=''>{details.classes}</h2>
                         <h2 className=''>{details.star}</h2>
                         <h2 className=''>{details.badge}</h2>
+                        <h5>{details.price}</h5>
                     </div>
                     
                 </div>

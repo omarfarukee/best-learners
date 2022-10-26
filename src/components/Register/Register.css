@@ -1,0 +1,28 @@
+.register{
+    width:400px;
+    border: 1px solid gray;
+    padding:20px;
+    border-radius: 10px;
+    background-image: linear-gradient(#FF9F4A, #FF3C83);
+}
+.from-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+   
+}
+.btn-1{
+    width:90%;
+    padding:10px;
+    border-radius: 15px;
+    border: none;
+    margin-bottom:10px;
+}
+.btn-2{
+    width:90%;
+    padding:10px;
+    border-radius: 15px;
+    border: none;
+   
+}

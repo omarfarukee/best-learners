@@ -1,14 +1,23 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import {Link} from 'react-router-dom'
+import { AuthContext } from '../ContextProver/ContextProvider';
 import ('./Header.css')
+
+
 const Header = () => {
+  const {user, logOut} = useContext(AuthContext)
+  const handleLogOut = () =>{
+    logOut()
+    .then(() => {})
+    .catch(error => console.error(error))
+}
+  console.log(user)
     return (
         <div>
             <>
@@ -33,8 +42,17 @@ const Header = () => {
                   <Nav.Link ><Link className='link' to='/courses'>Courses</Link></Nav.Link>
                   <Nav.Link ><Link className='link' to='/blog'>BLog</Link></Nav.Link>
                   <Nav.Link ><Link className='link' to='/faq'>FAQ</Link></Nav.Link>
-                  <Nav.Link ><Link className='link' to='/login'>login</Link></Nav.Link>
-                  <Nav.Link ><Link className='link' to='/register'>Register</Link></Nav.Link>
+                  <Nav.Link className='link'>{user?.displayName}</Nav.Link>
+                  
+                  {/* <Nav.Link ><Link className='link' to='/register'>Register</Link></Nav.Link> */}
+                  {
+                  user?.uid ? <Button onClick={handleLogOut} className='ms-2' variant="dark">Log-Out</Button> : 
+                  <Link to='/register'><Button  className='ms-2' variant="dark"> register</Button></Link>
+                }
+                {
+                  user?.uid ?<></> : 
+                  <Link to='/login'><Button  className='ms-2' variant="dark">Login</Button></Link>
+                }
                   <Nav.Link ><Link className='link' >Mood</Link></Nav.Link>
                 </Nav>
               </Offcanvas.Body>
