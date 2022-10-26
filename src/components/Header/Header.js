@@ -8,6 +8,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import {Link} from 'react-router-dom'
 import { FaUserAlt, FaUserCircle} from 'react-icons/fa'
+import pic from '../../images/logo (1).png'
 import { AuthContext } from '../ContextProver/ContextProvider';
 import ('./Header.css')
 
@@ -21,11 +22,12 @@ const Header = () => {
 }
   console.log(user)
     return (
-        <div>
+        <div className=''>
             <>
       {[ 'sm'].map((expand) => (
         <Navbar key={expand}  expand={expand} className=" nav">
-          <Container fluid>
+          <Container fluid className='ps-5'>
+                <img className='logo' src={pic} alt="" />
             <Navbar.Brand className='text-size'>Best Learner's</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
@@ -44,12 +46,12 @@ const Header = () => {
                   <Nav.Link ><Link className='link' to='/courses'>Courses</Link></Nav.Link>
                   <Nav.Link ><Link className='link' to='/blog'>BLog</Link></Nav.Link>
                   <Nav.Link ><Link className='link' to='/faq'>FAQ</Link></Nav.Link>
-                 
+                  <Nav.Link ><Link className='link' >Mood</Link></Nav.Link>
                   {/* <Nav.Link className='link'>{user?.displayName}</Nav.Link> */}
                  <div className='mt-2 ms-2'>
                 {
 
-                  user?.photoURL ?  <Image style={{height: '30px'}} roundedCircle src={user.photoURL}></Image>
+                  user?.photoURL ?  <img className='pic' src={user.photoURL} alt="" />
                   
                   :<FaUserCircle className='fs-2'></FaUserCircle>
                 }
@@ -62,7 +64,6 @@ const Header = () => {
                   user?.uid ?<></> : 
                   <Link to='/login'><Button  className='ms-2' variant="dark">Login</Button></Link>
                 }
-                  <Nav.Link ><Link className='link' >Mood</Link></Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

@@ -1,9 +1,33 @@
-.card{
-    width:50%;
-}
-.premium-pre{
-    padding:30px;
+.card-c{
+    width:520px;
+    padding:10px;
     text-align: center;
-    display: flex;
-    justify-content: center;
+    box-shadow:12px 10px 12px gray;
+    border-radius: 10px;
+    margin-top:3%;
+}
+.img-pre{
+    width: 100%;
+}
+.btn-btn-pre{
+    width:90%;
+    padding:15px;
+    border:none;
+    border-radius: 10px;
+    background-color:rgb(81, 81, 220);
+}
+.back{
+    text-decoration: none;
+    font-weight: 700;
+    font-size:20px;
+    color: black;
+}
+.check{
+  color: green;
+}
+.pre-container{
+    
+}
+.users{
+    font-size:200px;
 }

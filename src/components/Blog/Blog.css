@@ -8,10 +8,14 @@
     text-align: center;
 }
 .qus{
-    background-color:skyblue;
+    background-color:rgb(210, 176, 131);
     margin:2%;
     padding:3%;
     border-radius:12px;
     border:3px solid gray;
     box-shadow:5px 10px 20px black;
+}
+.qus:hover{
+    background-color:rgb(109, 90, 65);
+    color: white;
 }

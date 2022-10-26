@@ -18,7 +18,9 @@ function App() {
 const router = createBrowserRouter([
   {
     path:'/',
+     errorElement:<Faq></Faq>,
     element:<Main></Main>,
+   
     children: [
       {
         path:'/home',
@@ -41,19 +43,18 @@ const router = createBrowserRouter([
         path:'/register',
         element:<Register></Register>
       },
-      {
-        path:'/faq',
-        element:<Faq></Faq>
-      },
+      // {
+      //   path:'/faq',
+      //   element:<Faq></Faq>
+      // },
       {
         path:'/:id',
         element:<MoreDetails></MoreDetails>,
         loader: ({params}) => fetch(`https://best-learners-server.vercel.app/categories/${params.id}`)
       },
       {
-        path:'/:id/premium',
-        element:<PrivateRoute><Premium></Premium></PrivateRoute>,
-        loader: ({params}) => fetch(`https://best-learners-server.vercel.app/categories/${params.id}`)
+        path:'/premium',
+        element:<PrivateRoute><Premium></Premium></PrivateRoute>
       },
     ]
   }

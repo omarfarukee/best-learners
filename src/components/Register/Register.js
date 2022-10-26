@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import { FaGithub, FaGoogle, FaRegistered, FaUserClock } from 'react-icons/fa';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../ContextProver/ContextProvider';
 import ('./Register.css')
 const Register = () => {
     const {signInWithGoogle, registerLogin, updateUserProfile, signInWithGithub} = useContext(AuthContext)
     const [error, setError] = useState('')
-
+const navigate = useNavigate()
   const handleRegister = (event) =>{
     event.preventDefault() 
     const form = event.target
@@ -22,6 +23,7 @@ const Register = () => {
         setError('')
         handleProfile(name, photoURL)
         form.reset('')
+        navigate('/')
     })
     .catch(error => {
         console.error(error)
@@ -42,6 +44,7 @@ const Register = () => {
       .then(result => {
         const user = result.user
         console.log(user)
+        navigate('/')
       })
       .catch(error =>{
         console.error(error)
@@ -52,6 +55,7 @@ const Register = () => {
       .then(result => {
         const user = result.user
         console.log(user)
+        navigate('/')
       })
       .catch(error =>{
         console.error(error)
@@ -95,6 +99,7 @@ const Register = () => {
                    <button onClick={handleGitHub} className='btn-2'>
                     <FaGithub></FaGithub> Sign up with gitHub
                    </button>
+                   <small>Already have account ? <Link to='/login'>Login</Link></small>
             </div>
         </div>
             

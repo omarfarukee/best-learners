@@ -1,23 +1,27 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
-import Card from 'react-bootstrap/Card';
+import React, { useContext } from 'react';
+import { FaAlignRight, FaArrowRight, FaCheckDouble, FaUserAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../ContextProver/ContextProvider';
+
 import ('./Premium.css')
 const Premium = () => {
-    const preCard = useLoaderData();
-     const {name, image, classes, time, price, about} = preCard
+    const {user} = useContext(AuthContext)
     return (
-    <div className='premium-pre'>
-        <Card className='card'>
-            <Card.Img variant="top" src={image}/>
-            <Card.Body>
-                <Card.Title>{name}</Card.Title>
-                <Card.Text>
-                    {about}
-                </Card.Text>
-                
-            </Card.Body>
-        </Card>
-        </div>
+            <div className='d-flex justify-content-center'> 
+
+                <div className='card-c'>
+                    <h3> YEA ! your premium access done <FaCheckDouble className='check'></FaCheckDouble></h3>
+                   {user?.photoURL ? <img className='img-pre' src={user.photoURL} alt="" />:
+                   <FaUserAlt className='users'></FaUserAlt>}
+                     <div>
+                        <h3>Welcome "{user.displayName}"</h3>
+                        <h5>Your Email :"{user.email}"</h5>
+                        <h5>UID : {user.uid}</h5>
+                        <button className='btn-btn-pre'><Link to='/' className='back'>Go back home</Link></button>
+                     </div>
+                </div>
+               
+            </div>
     );
 };
 
