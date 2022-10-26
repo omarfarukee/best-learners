@@ -9,6 +9,8 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import {Link} from 'react-router-dom'
 import { FaUserAlt, FaUserCircle} from 'react-icons/fa'
 import pic from '../../images/logo (1).png'
+import Tippy from '@tippy.js/react';
+import 'tippy.js/dist/tippy.css';
 import { AuthContext } from '../ContextProver/ContextProvider';
 import ('./Header.css')
 
@@ -49,9 +51,12 @@ const Header = () => {
                   <Nav.Link ><Link className='link' >Mood</Link></Nav.Link>
                   {/* <Nav.Link className='link'>{user?.displayName}</Nav.Link> */}
                  <div className='mt-2 ms-2'>
+                
                 {
 
-                  user?.photoURL ?  <img className='pic' src={user.photoURL} alt="" />
+                  user?.photoURL ?   <Tippy content={<span className='fw-bold'>{user.displayName}</span>}>
+                     <img className='pic-header' src={user.photoURL} alt="" />
+                   </Tippy>
                   
                   :<FaUserCircle className='fs-2'></FaUserCircle>
                 }

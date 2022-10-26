@@ -1,9 +1,9 @@
-.img{
+.img-more{
     height:350px;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
-.img-div{
+.img-div-more{
     padding:10px;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -15,19 +15,19 @@
     padding-left:5%;
     padding-right: 5%;
 }
-.small{
+.small-more{
     padding:10px;
     margin-left: 10px;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     box-shadow:12px 10px 12px gray;
 }
-.time{
+.time-more{
     display: flex;
     justify-content: space-between;
     padding:10px;
 }
-.premium{
+.premium-more{
     width:80%;
     padding:15px;
     border: none;
@@ -35,13 +35,16 @@
     border-radius:10px;
     font-weight: 700;
 }
+.star-more{
+    color:gold;
+}
 @media only screen  and (max-width: 687px){
 
     .more{
         display: flex;
         flex-direction: column;
     }
-    .img{
+    .img-more{
         height:250px;
         width:100%;
         border-top-left-radius: 20px;
