@@ -1,10 +1,18 @@
 import React, { useContext, useState } from 'react';
 import Form from 'react-bootstrap/Form';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../ContextProver/ContextProvider';
 import ('../Register/Register.css')
 const Login = () => {
     const {login} = useContext(AuthContext)
+
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/'
+
     const [error, setError] = useState('')
+
+    const navigate = useNavigate()
+
     const handleLogin = (event) =>{
         event.preventDefault()
         const form = event.target
@@ -18,6 +26,7 @@ const Login = () => {
             form.reset('')
             console.log(user)
             setError('')
+            navigate(from, {replace : true})
         })
         .catch(error => {
             console.error(error)
@@ -48,6 +57,7 @@ const Login = () => {
                    </button> <br />
                    <p className='text-dark'>{error}</p>
                 </Form>
+                <small>New in Here? <Link to='/register'>Create Account</Link></small>
             </div>
         </div>
             

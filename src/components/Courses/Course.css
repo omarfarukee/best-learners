@@ -18,17 +18,18 @@
 .courseTwo{
     text-align: center;
 }
-.card-card{
+.cards{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
 @media only screen  and (max-width: 687px){
 
     .course-container{
        display: grid;
        grid-template-columns: repeat(1, 1fr);
     }
-    .card-card{
+    .cards{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }

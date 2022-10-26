@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaAngleDoubleRight } from 'react-icons/fa';
-import {useLoaderData} from 'react-router-dom'
+import {Link, useLoaderData} from 'react-router-dom'
 import ('./MoreDetails.css')
 
 const MoreDetails = () => {
@@ -21,7 +21,7 @@ const MoreDetails = () => {
                         <h5 className=''>{details.badge}</h5>
                         <h5>{details.price}</h5>
                     </div>
-                    <button className='premium'>Get Premium <FaAngleDoubleRight></FaAngleDoubleRight> </button>
+                  <Link to={`/${details.id}/premium`}><button className='premium'>Get Premium <FaAngleDoubleRight></FaAngleDoubleRight> </button></Link>  
                 </div>
         </div>
     );

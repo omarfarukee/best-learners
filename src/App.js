@@ -7,6 +7,8 @@ import Faq from './components/FAQ/Faq';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import MoreDetails from './components/MoreDetails/MoreDetails';
+import Premium from './components/Premium/Premium';
+import PrivateRoute from './components/Private/PrivateRoute';
 import Register from './components/Register/Register';
 
 import Main from './Layout/Main';
@@ -46,6 +48,11 @@ const router = createBrowserRouter([
       {
         path:'/:id',
         element:<MoreDetails></MoreDetails>,
+        loader: ({params}) => fetch(`https://best-learners-server.vercel.app/categories/${params.id}`)
+      },
+      {
+        path:'/:id/premium',
+        element:<PrivateRoute><Premium></Premium></PrivateRoute>,
         loader: ({params}) => fetch(`https://best-learners-server.vercel.app/categories/${params.id}`)
       },
     ]

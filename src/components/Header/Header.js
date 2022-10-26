@@ -47,15 +47,13 @@ const Header = () => {
                  
                   {/* <Nav.Link className='link'>{user?.displayName}</Nav.Link> */}
                  <div className='mt-2 ms-2'>
-                   {
+                {
 
                   user?.photoURL ?  <Image style={{height: '30px'}} roundedCircle src={user.photoURL}></Image>
                   
                   :<FaUserCircle className='fs-2'></FaUserCircle>
                 }
                   </div> 
-                 
-                  {/* <Nav.Link ><Link className='link' to='/register'>Register</Link></Nav.Link> */}
                   {
                   user?.uid ? <Button onClick={handleLogOut} className='ms-2' variant="dark">Log-Out</Button> : 
                   <Link to='/register'><Button  className='ms-2' variant="dark"> register</Button></Link>
