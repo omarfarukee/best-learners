@@ -45,9 +45,15 @@
         flex-direction: column;
     }
     .img-more{
-        height:250px;
+        height:200px;
         width:100%;
         border-top-left-radius: 20px;
         border-bottom-right-radius: 20px;
+    }
+    .time-more h5{
+        font-size:13px;
+    }
+    .premium-more{
+    margin-left:8px;
     }
 }

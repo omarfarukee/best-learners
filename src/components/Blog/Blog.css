@@ -19,3 +19,9 @@
     background-color:rgb(109, 90, 65);
     color: white;
 }
+@media only screen  and (max-width: 687px){
+    .qus{
+       margin-top:20px;
+       margin-bottom: 20px;
+    }
+}

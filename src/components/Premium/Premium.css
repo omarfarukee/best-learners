@@ -8,6 +8,7 @@
 }
 .img-pre{
     width: 100%;
+    border-radius:10px;
 }
 .btn-btn-pre{
     width:90%;
@@ -30,4 +31,21 @@
 }
 .prename{
     font-weight:700;
+}
+
+@media only screen  and (max-width: 687px){
+    .card-c{
+        width:300px;
+        padding:10px;
+        text-align: center;
+        box-shadow:12px 10px 12px gray;
+        border-radius: 10px;
+        margin-top:3%;
+    }
+    .img-pre{
+       height:270px;
+    }
+    .UId{
+        font-size:15px;
+    }
 }

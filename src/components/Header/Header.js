@@ -43,7 +43,7 @@ const [mood, setMood] = useState(
             <>
       {[ 'sm'].map((expand) => (
         <Navbar key={expand}  expand={expand} className=" nav">
-          <Container fluid className='ps-5'>
+          <Container fluid className=''>
                 <img className='logo' src={pic} alt="" />
             <Navbar.Brand className='text-size'>Best Learner's</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
