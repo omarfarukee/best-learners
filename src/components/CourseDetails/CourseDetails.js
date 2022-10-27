@@ -5,7 +5,7 @@ const CourseDetails = ({course}) => {
     const { name, id } = course
     return (
         <div>
-          <h5><button className='btn-btn'><Link className='link' to={`/${id}`}> {name}</Link> </button></h5>  
+          <h5><button className='btn-btn-course'><Link className='link-course' to={`/${id}`}> {name}</Link> </button></h5>  
         </div>
     );
 };

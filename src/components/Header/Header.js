@@ -44,7 +44,7 @@ const Header = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link ><Link className='link' to='/home'>Home</Link></Nav.Link>
+                  <Nav.Link ><Link className='link' to='/'>Home</Link></Nav.Link>
                   <Nav.Link ><Link className='link' to='/courses'>Courses</Link></Nav.Link>
                   <Nav.Link ><Link className='link' to='/blog'>BLog</Link></Nav.Link>
                   <Nav.Link ><Link className='link' to='/faq'>FAQ</Link></Nav.Link>
@@ -54,7 +54,7 @@ const Header = () => {
                 
                 {
 
-                  user?.photoURL ?   <Tippy content={<span className='fw-bold'>{user.displayName}</span>}>
+                  user?.photoURL || user?.uid ? <Tippy content={<span className='fw-bold'>{user.displayName}</span>}>
                      <img className='pic-header' src={user.photoURL} alt="" />
                    </Tippy>
                   

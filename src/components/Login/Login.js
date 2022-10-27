@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import Form from 'react-bootstrap/Form';
+import { FaUserCheck } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import pic from '../../images/pngwing.com (1).png';
 import { AuthContext } from '../ContextProver/ContextProvider';
 import ('../Register/Register.css')
 const Login = () => {
@@ -34,30 +36,33 @@ const Login = () => {
         })
     }
     return (
-        <div>
-            <h2>this is register</h2>
+        <div className='login-container'>
+            <div>
+                <img className='pic-1' src={pic} alt="" />
+            </div>
             <div className='from-container'>
                
             <div className='login'>
                 <Form onSubmit={handleLogin}>
+                    <h2 className='fw-bold border-bottom'>Login</h2>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
+                        <Form.Label className='fw-bold'>Email address</Form.Label>
                         <Form.Control type="email" name='email' placeholder="Enter email" required/>
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>Password</Form.Label>
+                        <Form.Label className='fw-bold'>Password</Form.Label>
                         <Form.Control type="password" name='password' placeholder="Password" required/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
                         
                     </Form.Group>
-                   <button className='btn-1'>
-                        Login
+                   <button className='btn-1 fw-bold fs-5'>
+                    <FaUserCheck></FaUserCheck> Login
                    </button> <br />
-                   <p className='text-dark'>{error}</p>
+                   <p className='text-white'>{error}</p>
                 </Form>
-                <small>New in Here? <Link to='/register'>Create Account</Link></small>
+                <small><span className='fw-bold'>New in Here?</span> <Link to='/register'><span className='fw-bold text-dark'> Create Account</span></Link></small>
             </div>
         </div>
             

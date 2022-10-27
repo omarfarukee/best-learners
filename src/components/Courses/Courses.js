@@ -18,7 +18,7 @@ const Courses = () => {
                  }
             </div>
            <div >
-                  <h3 className='courseTwo'> h2 this is course 2</h3> 
+                  {/* <h3 className='courseTwo'></h3>  */}
               <div className='cards p-3'>
                    {
                 courses.map(courseCard => <CourseCard

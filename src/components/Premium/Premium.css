@@ -25,9 +25,9 @@
 .check{
   color: green;
 }
-.pre-container{
-    
-}
 .users{
     font-size:200px;
+}
+.prename{
+    font-weight:700;
 }

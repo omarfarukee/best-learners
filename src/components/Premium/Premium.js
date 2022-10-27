@@ -14,9 +14,9 @@ const Premium = () => {
                    {user?.photoURL ? <img className='img-pre' src={user.photoURL} alt="" />:
                    <FaUserAlt className='users'></FaUserAlt>}
                      <div>
-                        <h3>Welcome "{user.displayName}"</h3>
-                        <h5>Your Email :"{user.email}"</h5>
-                        <h5>UID : {user.uid}</h5>
+                        <h3>Well done <span className='prename'>"{user.displayName}"</span> </h3>
+                        <h5>Your Email : <span className='prename'>"{user.email}"</span> </h5>
+                        <h5>UID : <span className='prename'>{user.uid}</span> </h5>
                         <button className='btn-btn-pre'><Link to='/' className='back'>Go back home</Link></button>
                      </div>
                 </div>

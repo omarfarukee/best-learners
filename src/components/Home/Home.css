@@ -1,4 +1,39 @@
-/* .home{
-    background-image: url("../../images/21161850.jpg");
-   height: 500px;
-} */
+.home-img{
+    height:400px;
+    margin-right:20px;
+    padding: 10px;
+    box-shadow: 12px 12px 20px gray;
+    border-radius:20px;
+}
+.home{
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    margin-right:5%;
+    margin-left: 5%;
+}
+.home-btn{
+    border: none;
+    padding:15px;
+    font-weight: 700;
+    background-image: linear-gradient(#00BC40, #4C3AE3);
+    border-radius:15px;
+    color:wheat;
+}
+.home-btn:hover{
+    background-image: linear-gradient(#18c150, #7468dd);
+    
+}
+@media only screen  and (max-width: 687px){
+
+    .home-img{
+        height:300px;
+        margin-bottom: 20px;
+        margin-left:2%;
+    }
+    .home{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

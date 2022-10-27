@@ -12,7 +12,7 @@ const MoreDetails = () => {
                     <img className='img-more' src={details.image} alt="" />
                 </div>
                 <div className='small-more'>
-                    <h1>{details.name}</h1>
+                    <h1 className='text-primary'>{details.name}</h1>
                     <p>{details.about}</p>
                     <div className='time-more'>
                         <h5 className=''><FaClock></FaClock>{details.time}</h5>

@@ -1,13 +1,19 @@
-.btn-btn{
+.btn-btn-course{
     border: none;
     padding:10px;
-    background-color: blanchedalmond;
+    background-color: rgb(240, 215, 179);
     width:150px;
     text-align: center;
     border-radius: 10px;
     text-decoration: none;
+    color:white;
+    font-weight: 700;
 }
-.images{
+.btn-btn-course:hover{
+  background-color: rgb(247, 192, 109);
+}
+
+.images-course{
     width: 100%;
     height:170px;
     border-radius: 10px;
@@ -16,10 +22,9 @@
     border-radius: 15px;
     margin:10px;
     box-shadow: 10px 8px 8px gray;
-    border: 1px solid red;
     width: 500px;
 }
-.link{
+.link-course{
     text-decoration: none;
 }
 .card-btn{
@@ -28,17 +33,22 @@
 }
 .course-card{
     margin: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: rgb(249, 243, 243);
+    border-radius: 15px;
+    background-color:gainsboro;
+    
 }
 .btn-see{
     border: none;
     padding:15px;
-    background-color: bisque;
+    background-color: rgb(152, 60, 238);
     width:100%;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    color: white;
+    font-weight: 700;
+}
+.btn-see:hover{
+   background-color: rgb(96, 9, 176);
 }
 .course-card:hover{
     box-shadow: 12px 11px 12px black;
