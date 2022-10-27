@@ -1,4 +1,4 @@
-import React,{useContext} from 'react';
+import React,{useContext, useState, useEffect} from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -7,7 +7,8 @@ import Image from 'react-bootstrap/Image'
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import {Link} from 'react-router-dom'
-import { FaUserAlt, FaUserCircle} from 'react-icons/fa'
+import { FaUserAlt, FaUserCircle, FaHome, FaBookOpen,FaMicroblog,FaQuestion, 
+FaSun, FaMoon, FaRegSun} from 'react-icons/fa'
 import pic from '../../images/logo (1).png'
 import Tippy from '@tippy.js/react';
 import 'tippy.js/dist/tippy.css';
@@ -22,7 +23,21 @@ const Header = () => {
     .then(() => {})
     .catch(error => console.error(error))
 }
-  console.log(user)
+const [mood, setMood] = useState(
+  localStorage.getItem('theme') || 'light'
+ );
+ const handleMood= () => {
+  if (mood === 'light') {
+      setMood('dark');
+  }
+  else {
+      setMood('light')
+  }
+ }
+ useEffect(() => {
+  localStorage.setItem('theme', mood);
+  document.body.className = mood;
+   }, [mood])
     return (
         <div className=''>
             <>
@@ -44,12 +59,16 @@ const Header = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link ><Link className='link' to='/'>Home</Link></Nav.Link>
-                  <Nav.Link ><Link className='link' to='/courses'>Courses</Link></Nav.Link>
-                  <Nav.Link ><Link className='link' to='/blog'>BLog</Link></Nav.Link>
-                  <Nav.Link ><Link className='link' to='/faq'>FAQ</Link></Nav.Link>
-                  <Nav.Link ><Link className='link' >Mood</Link></Nav.Link>
-                  <Nav.Link ><Link className='link' to='/error'>Error</Link></Nav.Link>
+                  <Nav.Link ><FaHome className='mb-1 text-dark'></FaHome><Link className='link' to='/'>Home</Link></Nav.Link>
+                  <Nav.Link ><FaBookOpen className='mb-1 text-dark'></FaBookOpen> <Link className='link' to='/courses'>Courses</Link></Nav.Link>
+                  <Nav.Link ><FaMicroblog className='mb-1 text-dark'></FaMicroblog><Link className='link' to='/blog'>BLog</Link></Nav.Link>
+                  <Nav.Link ><FaQuestion className='mb-1 text-dark'></FaQuestion><Link className='link' to='/faq'>FAQ</Link></Nav.Link>
+                  <Nav.Link ><Link className='link ' to='/error'>Error</Link></Nav.Link>
+                  <Link className={`Header ${mood}`} onClick={handleMood}><Button className='moodBtn' style={{"borderRadius": "10%"} } variant = {mood}>{mood} {mood === 'light'?
+                 <FaRegSun className='sun'></FaRegSun>:
+                  <FaMoon className='mb-1'></FaMoon>
+                  }
+                  </Button></Link>
                   {/* <Nav.Link className='link'>{user?.displayName}</Nav.Link> */}
                  <div className='mt-2 ms-2'>
                 

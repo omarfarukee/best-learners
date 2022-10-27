@@ -13,6 +13,7 @@
     padding:3%;
     border-radius:12px;
     box-shadow:5px 10px 20px black;
+    color: black;
 }
 .qus:hover{
     background-color:rgb(109, 90, 65);

@@ -10,7 +10,7 @@ const CourseCard = ({ courseCard }) => {
         <div className='course-card p-2'>
             <img className='images-course' src={image} alt="" />
             <div className='mt-3 mb-3'>
-                <h4>{name}</h4>
+                <h4 className='text-dark'>{name}</h4>
             </div>
             <Link className='card-btn' to={`/categories/${id}`}><button className='btn-see'>See Details <FaArrowAltCircleRight></FaArrowAltCircleRight> </button></Link>
         </div>
