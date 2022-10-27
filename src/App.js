@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blog from './components/Blog/Blog';
 import Courses from './components/Courses/Courses';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 import Faq from './components/FAQ/Faq';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
@@ -18,8 +19,8 @@ function App() {
 const router = createBrowserRouter([
   {
     path:'/',
-     errorElement:<Faq></Faq>,
-    element:<Main></Main>,
+     errorElement:<ErrorPage></ErrorPage>,
+      element:<Main></Main>,
    
     children: [
       {
@@ -40,12 +41,16 @@ const router = createBrowserRouter([
         element:<Login></Login>
       },
       {
+        path:'/faq',
+        element:<Faq></Faq>
+      },
+      {
         path:'/register',
         element:<Register></Register>
       },
       
       {
-        path:'/:id',
+        path:'/categories/:id',
         element:<MoreDetails></MoreDetails>,
         loader: ({params}) => fetch(`https://best-learners-server.vercel.app/categories/${params.id}`)
       },
@@ -58,7 +63,7 @@ const router = createBrowserRouter([
 ])
 
   return (
-    <div >
+    <div id='react-page' >
           <RouterProvider router={router}>
 
           </RouterProvider>

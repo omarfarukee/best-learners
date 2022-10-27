@@ -2,6 +2,7 @@ import React from  'react';
 import {useLoaderData} from 'react-router-dom'
 import CourseCard from '../CourseCard/CourseCard';
 import CourseDetails from '../CourseDetails/CourseDetails';
+import pic from '../../images/face-removebg-preview.png'
 import ('./Course.css')
 const Courses = () => {
     const courses = useLoaderData()
@@ -16,6 +17,10 @@ const Courses = () => {
                     course={course}
                     ></CourseDetails>)
                  }
+                 <div>
+                        <img className='face' src={pic} alt="" />
+                 </div>
+                 <h6 className='fw-bold text-white'>hard Work is key to success</h6>
             </div>
            <div >
                   {/* <h3 className='courseTwo'></h3>  */}

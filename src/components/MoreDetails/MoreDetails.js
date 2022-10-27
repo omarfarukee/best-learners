@@ -1,13 +1,21 @@
 import React from 'react';
 import { FaAngleDoubleRight, FaBook, FaClock, FaDollarSign, FaStar } from 'react-icons/fa';
 import {Link, useLoaderData} from 'react-router-dom'
+import ReactPdf from '../ReactPdf/ReactPdf';
 import ('./MoreDetails.css')
 
 const MoreDetails = () => {
     const details = useLoaderData()
     console.log(details)
     return (
+        <div className='mb-5'>
+            <div className='d-flex justify-content-center'>
+                 <ReactPdf rootElementID="react-page" DownloadFileName = "Detail-page"></ReactPdf>
+            </div>
+       
         <div className='more mt-5'>
+                
+
                 <div className='img-div-more'>
                     <img className='img-more' src={details.image} alt="" />
                 </div>
@@ -23,6 +31,7 @@ const MoreDetails = () => {
 
                   <Link to='/premium' className='ms-4'><button className='premium-more'>Get Premium <FaAngleDoubleRight></FaAngleDoubleRight></button></Link>  
                 </div>
+        </div>
         </div>
     );
 };

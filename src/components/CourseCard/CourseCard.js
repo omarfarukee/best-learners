@@ -12,7 +12,7 @@ const CourseCard = ({ courseCard }) => {
             <div className='mt-3 mb-3'>
                 <h4>{name}</h4>
             </div>
-            <Link className='card-btn' to={`/${id}`}><button className='btn-see'>See Details <FaArrowAltCircleRight></FaArrowAltCircleRight> </button></Link>
+            <Link className='card-btn' to={`/categories/${id}`}><button className='btn-see'>See Details <FaArrowAltCircleRight></FaArrowAltCircleRight> </button></Link>
         </div>
     );
 };

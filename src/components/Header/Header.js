@@ -39,7 +39,7 @@ const Header = () => {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Offcanvas
+                 Best Learners
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
@@ -49,6 +49,7 @@ const Header = () => {
                   <Nav.Link ><Link className='link' to='/blog'>BLog</Link></Nav.Link>
                   <Nav.Link ><Link className='link' to='/faq'>FAQ</Link></Nav.Link>
                   <Nav.Link ><Link className='link' >Mood</Link></Nav.Link>
+                  <Nav.Link ><Link className='link' to='/error'>Error</Link></Nav.Link>
                   {/* <Nav.Link className='link'>{user?.displayName}</Nav.Link> */}
                  <div className='mt-2 ms-2'>
                 
@@ -62,12 +63,12 @@ const Header = () => {
                 }
                   </div> 
                   {
-                  user?.uid ? <Button onClick={handleLogOut} className='ms-2' variant="dark">Log-Out</Button> : 
-                  <Link to='/register'><Button  className='ms-2' variant="dark"> register</Button></Link>
+                  user?.uid ? <Button onClick={handleLogOut} className='ms-2' variant="danger">Log-Out</Button> : 
+                  <Link to='/register'><Button  className='ms-2' variant="primary"> register</Button></Link>
                 }
                 {
                   user?.uid ?<></> : 
-                  <Link to='/login'><Button  className='ms-2' variant="dark">Login</Button></Link>
+                  <Link to='/login'><Button  className='ms-2' variant="primary">Login</Button></Link>
                 }
                 </Nav>
               </Offcanvas.Body>

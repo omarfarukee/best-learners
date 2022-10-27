@@ -1,5 +1,6 @@
 import React from  'react';
 import {Link} from 'react-router-dom'
+
 import ('./CourseDetails.css')
 const CourseDetails = ({course}) => {
     const { name, id } = course

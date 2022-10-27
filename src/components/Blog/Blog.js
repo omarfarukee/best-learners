@@ -3,9 +3,9 @@ import ('./Blog.css')
 const Blog = () => {
     return (
         <div >
-        <div className='ans'>
+        {/* <div className='ans'>
             <h1>Few Regular Asking Qus-Ans</h1>
-        </div>
+        </div> */}
     <div >
         <div className='qus'>
             <h3>Q:=  what is cors?</h3>
