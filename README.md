@@ -1,4 +1,6 @@
 # Site name : Best learners's
+## Server Site API link :
+https://best-learners-server.vercel.app/categories
 
 ## Live site link : 
 https://best-learners-4cb8c.web.app/
